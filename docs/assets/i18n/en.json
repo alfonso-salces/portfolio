@@ -1,0 +1,13 @@
+{
+  "public": {
+    "navbar": {
+      "blog": "Blog",
+      "contact": "Contact",
+      "about_me": "About me",
+      "courses": "Courses"
+    },
+    "header": {
+      "presentation": "Hello, my name is Alfonso Salces, im web developer focused in Front-End. I have worked in differents companies, in different proyects to educational and banking sector."
+    }
+  }
+}
