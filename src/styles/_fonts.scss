@@ -1,0 +1,38 @@
+// DejaVu Sans
+
+@mixin font_ttf($font-family, $font-file) {
+    @font-face {
+      font-family: $font-family;
+      src: url($font-file+'.ttf') format('truetype');
+      font-weight: normal;
+      font-style: normal;
+    }
+}
+
+
+@mixin font_woff($font-family, $font-file) {
+    @font-face {
+      font-family: $font-family;
+      src: url($font-file+'.woff') format('woff');
+      font-weight: 300;
+      font-style: normal;
+    }
+}
+
+@include font_ttf('DejaVu', 'src/assets/fonts/dejavu/DejaVuSansMono');
+@include font_ttf('DejaVu-Bold', 'src/assets/fonts/dejavu/DejaVuSansMono-Bold');
+@include font_ttf('DejaVu-BoldOblique', 'src/assets/fonts/dejavu/DejaVuSansMono-BoldOblique');
+@include font_ttf('DejaVu-Oblique', 'src/assets/fonts/dejavu/DejaVuSansMono-Oblique');
+
+@include font_woff('Helvetica Bold Italic', 'src/assets/fonts/helvetica/Helvetica 76 Bold Italic');
+@include font_woff('Helvetica Ultra Light', 'src/assets/fonts/helvetica/Helvetica25UltraLight_22433');
+@include font_woff('Helvetica Thin', 'src/assets/fonts/helvetica/Helvetica35Thin_22435');
+@include font_woff('Helvetica Neue Black Italic', 'src/assets/fonts/helvetica/HelveticaNeueBlackItalic 1');
+@include font_woff('Helvetica Neue Bold', 'src/assets/fonts/helvetica/HelveticaNeueBold');
+@include font_woff('Helvetica Neue Medium Italic', 'src/assets/fonts/helvetica/HelveticaNeueMediumItalic');
+
+$font-helvetica: Helvetica Neue Bold;
+$font-dejavu: DejaVu-Oblique;
+$font-title: 24px;
+$font-subtitle: 18px;
+$font-title: 14px;

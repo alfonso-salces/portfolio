@@ -1,0 +1,97 @@
+@import 'src/styles/colors.scss';
+@import 'src/styles/fonts.scss';
+@import 'src/styles/mixins.scss';
+
+.toolbar_container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    .toolbar__logo-container {
+        color: $secondary-color;
+        z-index: 1;
+        .main-logo {
+            width: 150px;
+        }
+    }
+    .toolbar__links-container {
+        display: flex;
+        color: $secondary-color;
+        font-family: $font-helvetica;
+        z-index: 1;
+        .no_border:hover {
+            border: none;
+        }
+    }
+    .toolbar__languages-dropdown {
+        font-family: $font-helvetica;
+        position: absolute;
+        color: $secondary-color;
+        z-index: 1;
+    }
+}
+
+@include respond-below(sm) {
+    .toolbar_container {
+        flex-direction: column;
+    }
+    .toolbar__links-container {
+        flex-direction: column;
+        margin-left: 1em;
+        margin-bottom: 4em;
+        .toolbar__link {
+            margin-top: 1em;
+        }
+    }
+    .toolbar__languages-dropdown {
+        top: 17.5em;
+        .language-item {
+            padding-left: 0.9em;
+        }
+    }
+    .toolbar__toggle {
+        color: $secondary-color;
+        z-index: 2;
+        position: absolute;
+        top: 1.5em;
+        right: 2em;
+        .mat-icon {
+            font-size: 36px;
+        }
+    }
+}
+
+@include respond-above(sm) {
+    .toolbar_container {
+        flex-direction: row;
+        align-items: center;
+    }
+    .toolbar__links-container {
+        flex-direction: row;
+        .toolbar__link {
+            cursor: pointer;
+            display: flex;
+            padding: 0.5em 1em 0.5em 1em;
+            img {
+                margin-left: 0.5em;
+            }
+        }
+        .toolbar__link:hover {
+            background-color: lighten($primary-color, 5%);
+        }
+    }
+    .toolbar__languages-dropdown {
+        cursor: pointer;
+        top: 3.5em;
+        right: 1.4em;
+        .language-item {
+            padding-left: 0.5em;
+            padding: 0.5em 1em 0.5em 1em;
+        }
+        .language-item:hover {
+            background-color: lighten($primary-color, 5%);
+        }
+    }
+    .toolbar__toggle {
+        display: none;
+    }
+}

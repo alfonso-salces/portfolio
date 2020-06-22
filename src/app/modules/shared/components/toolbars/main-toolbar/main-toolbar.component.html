@@ -1,0 +1,30 @@
+<div class="toolbar_container">
+    <div class="toolbar__logo-container">
+        <img src="assets/images/logo-texto.svg" class="main-logo" alt="Logotipo"/>
+    </div>
+
+    <div class="toolbar__links-container" *ngIf="isToggled" [@fadeInOut]="isToggled">
+        <div class="toolbar__link">{{'public.navbar.blog' | translate}}</div>
+        <div class="toolbar__link">{{'public.navbar.courses' | translate}}</div>
+        <div class="toolbar__link">{{'public.navbar.about_me' | translate}}</div>
+        <div class="toolbar__link">{{'public.navbar.contact' | translate}}</div>
+        <div (click)="toggleLanguages()" class="toolbar__link no_border">
+            {{currentLangObj.lang | uppercase}}
+            <img src="assets/images/{{currentLangObj.flag}}" width="15px" alt="lang"/>
+            <mat-icon matSuffix>keyboard_arrow_down</mat-icon>
+        </div>
+    </div>
+
+    <div class="toolbar__languages-dropdown" *ngIf="showLanguages" [@fadeInOut]="showLanguages">
+        <ng-container *ngFor="let lang of unSelectedLangs">
+            <div class="language-item" (click)="changeLanguage(lang.lang)">
+                {{lang.lang | uppercase}} 
+                <img src="assets/images/{{lang.flag}}" width="15px" alt="lang"/>
+            </div>
+        </ng-container>
+    </div>
+
+    <div class="toolbar__toggle" (click)="onToggleClick()">
+        <mat-icon matSuffix>reorder</mat-icon>
+    </div>
+</div>

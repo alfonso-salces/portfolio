@@ -1,0 +1,51 @@
+@import 'src/styles/fonts';
+@import 'src/styles/colors';
+@import 'src/styles/mixins';
+
+.skills__container {
+    display: grid;
+    box-sizing: border-box;
+    .skill__card {
+        margin: 1em;
+        height: 300px;
+        .skill__icon {
+            text-align: center;
+            margin-top: 0.5em;
+            margin-bottom: 0.5em;
+            img {
+                width: 6em;
+                color: $primary-color;
+            }
+        }
+        .skill__title {
+            text-align: center;
+            font-family: $font-helvetica;
+            font-size: 18px;
+            color: $primary-color;
+        }
+        .skill__description {
+            margin: 2em;
+        }
+    }
+}
+
+// Pantallas pequeñas
+@include respond-below(sm) {
+    .skills__container {
+        grid-template-columns: 100%;
+    }
+}
+
+// Pantallas medianas
+@include respond-between(sm, lg) {
+    .skills__container {
+        grid-template-columns: 33% 33% 33%;
+    }
+}
+
+// Pantallas grandes
+@include respond-above(lg) {
+    .skills__container {
+        grid-template-columns: 33% 33% 33%;
+    }
+}

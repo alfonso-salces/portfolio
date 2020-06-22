@@ -1,0 +1,105 @@
+@import './fonts';
+@import './colors';
+@import './mixins';
+@import './spacings';
+
+// Botones
+.pf-button {
+    border: 0;
+    font-family: $font-helvetica;
+    padding: 1em 1.5em;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+// Subrayado que se utiliza debajo de los títulos de las cartas
+.underline {
+    width: 80px;
+    height: 5px;
+    border-radius: 0px 10px 10px 0px;
+    margin-top: 0.5em;
+}
+
+// Cartas
+.pf-card {
+    padding: 1.5em;
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background-color: $white-color;
+    .pf-card-title {
+        height: 15%;
+        max-height: 50px;
+        font-family: $font-helvetica;
+        font-size: 18px;
+        font-weight: bold;
+        color: $primary-color;
+        h3 {
+            margin: 0;
+        }
+    }
+    .pf-card-body {
+        height: 60%;
+        min-height: 100px;
+        font-family: $font-helvetica;
+        font-size: 14px;
+        text-align: justify;
+    }
+    .pf-card-footer {
+        height: 15%;
+        .pf-card-actions {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+}
+
+// Pantallas pequeñas
+@include respond-below(sm) {
+    .pf-container {
+        margin: 0.5em;
+        height: 500px;
+        .pf-cards-container {
+            .pf-card {
+                width: 95%;
+                margin-bottom: 2em;
+            }
+        }
+    }
+}
+
+// Pantallas medianas
+@include respond-between(sm, lg) {
+    .pf-container {
+        width: 90%;
+        margin: 0 auto;
+        .pf-cards-container {
+            display: grid;
+            grid-template-columns: 50% 50%;
+            .pf-card {
+                width: 95%;
+                margin-bottom: 2em;
+            }
+        }
+    }
+}
+
+// Pantallas grandes
+@include respond-above(lg) {
+    .pf-container {
+        width: 90%;
+        margin: 0 auto;
+        .pf-cards-container {
+            display: grid;
+            grid-template-columns: 30% 30% 30%;
+            .pf-card {
+                width: 95%;
+                margin-bottom: 2em;
+            }
+        }  
+    }
+}

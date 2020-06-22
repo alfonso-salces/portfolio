@@ -1,0 +1,81 @@
+@import 'src/styles/colors.scss';
+@import 'src/styles/fonts.scss';
+@import 'src/styles/mixins.scss';
+
+.main__welcome {
+    .navbar__welcome {
+        background-color: $primary-color;
+        text-transform: uppercase;
+    }
+}
+
+@include respond-below(sm) {
+    .container__welcome {
+        background: $primary-color;
+        color: $secondary-color;
+        font-size: $font-title;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 2em;
+        .image__welcome {
+            width: 50%;
+            img {
+                width: 100%;
+                border-radius: 50%;
+                border-top: 4px solid $secondary-color;
+                border-right: 4px solid $secondary-color;
+                border-left: 4px solid $primary-color;
+                border-bottom: 4px solid $primary-color;
+            }
+        }
+        .title__welcome {
+            text-align: justify;
+            width: 90%;
+        }
+    }
+}
+
+@include respond-above(sm) {
+    .header__welcome {
+        .polygon__welcome {
+            background-color: $primary-color;
+            transform: skewY(8deg);
+            width: 100%;
+            height: 80vh;
+            max-height: 400px;
+            overflow: hidden;
+            transform-origin: 100%;
+            box-sizing: border-box;
+        }
+        .container__welcome {
+            position: absolute;
+            top: 10%;
+            left: 20%;
+            height: 300px;
+            width: 60%;
+            color: $secondary-color;
+            font-family: $font-dejavu;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            .image__welcome {
+                width: 30%;
+                margin-left: 2em;
+                img {
+                    width: 70%;
+                    border-radius: 50%;
+                    border-top: 4px solid $secondary-color;
+                    border-right: 4px solid $secondary-color;
+                    border-left: 4px solid $primary-color;
+                    border-bottom: 4px solid $primary-color;
+                }
+            }
+            .title__welcome {
+                text-align: justify;
+                width: 70%;
+                margin-right: 3em;
+            }
+        }
+    }
+}

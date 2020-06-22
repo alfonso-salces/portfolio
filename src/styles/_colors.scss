@@ -1,0 +1,52 @@
+$primary-color: #162839;
+$secondary-color: #73c8c6;
+$white-color: #f3f0f0;
+
+// Shadows
+$primary-shadow: 10px 10px 5px 0px rgba(22,40,57,1);
+$secondary-shadow: 10px 10px 5px 0px rgba(115,200,198,1);
+
+// Butons colors
+.primary-filled {
+    background-color: $primary-color;
+    color: $secondary-color;
+}
+.secondary-filled {
+    background-color: $secondary-color;
+    color: $white-color;
+}
+.primary-outlined {
+    border: 1px solid $primary-color;
+    color: $primary-color;
+    background: transparent;
+}
+.secondary-outlined {
+    border: 1px solid $secondary-color;
+    color: $secondary-color;
+    background: transparent;
+}
+
+
+// Backgrounds
+.bg-primary {
+    background-color: $primary-color;
+}
+.bg-secondary {
+    background-color: $secondary-color;
+}
+
+// Text color
+.primary {
+    color: $primary-color;
+}
+.secondary {
+    color: $secondary-color;
+}
+
+// Shadows
+.primary-shadow {
+    box-shadow: $primary-shadow;
+}
+.secondary-shadow {
+    box-shadow: $secondary-shadow;
+}
