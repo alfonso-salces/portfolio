@@ -4,10 +4,10 @@
     </div>
 
     <div class="toolbar__links-container" *ngIf="isToggled" [@fadeInOut]="isToggled">
-        <div class="toolbar__link">{{'public.navbar.blog' | translate}}</div>
-        <div class="toolbar__link">{{'public.navbar.courses' | translate}}</div>
-        <div class="toolbar__link">{{'public.navbar.about_me' | translate}}</div>
-        <div class="toolbar__link">{{'public.navbar.contact' | translate}}</div>
+        <div class="toolbar__link" routerLink="/" routerLinkActive="active-link">{{'public.navbar.blog' | translate}}</div>
+        <div class="toolbar__link" routerLink="/courses" routerLinkActive="active-link">{{'public.navbar.courses' | translate}}</div>
+        <div class="toolbar__link" routerLink="/about" routerLinkActive="active-link">{{'public.navbar.about_me' | translate}}</div>
+        <div class="toolbar__link" routerLink="/contact" routerLinkActive="active-link">{{'public.navbar.contact' | translate}}</div>
         <div (click)="toggleLanguages()" class="toolbar__link no_border">
             {{currentLangObj.lang | uppercase}}
             <img src="assets/images/{{currentLangObj.flag}}" width="15px" alt="lang"/>

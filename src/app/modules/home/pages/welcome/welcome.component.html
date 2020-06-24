@@ -1,4 +1,4 @@
-<div class="main__welcome">
+<div class="main__welcome" #scrollDiv>
   <div class="navbar__welcome">
     <pf-main-toolbar></pf-main-toolbar>
   </div>
@@ -20,4 +20,8 @@
 
 <div class="pf-container">
   <skills-component [skills]="skills"></skills-component>
+</div>
+
+<div class="pf-fab" (click)="scrollTop()" *ngIf="showFab">
+  <mat-icon>keyboard_arrow_up</mat-icon>
 </div>

@@ -38,4 +38,8 @@ export class LanguageService {
   getLangList(): any[] {
     return this.langList;
   }
+
+  getTranslation(lang: string): Observable<any> {
+    return this.translateService.getTranslation(lang);
+  }
 }

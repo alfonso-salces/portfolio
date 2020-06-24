@@ -39,7 +39,6 @@ export class MainToolbarComponent implements OnInit {
     this.setToggleLang();
     this.langService.getCurrentLangObservable().subscribe((lang) => {
       this.setToggleLang();
-      console.log(lang);
     });
   }
 
