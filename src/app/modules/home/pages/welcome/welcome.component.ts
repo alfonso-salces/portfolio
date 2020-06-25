@@ -13,7 +13,7 @@ export class WelcomeComponent implements OnInit {
   skills: SkillModel[];
   showFab: boolean = true;
   @ViewChild("scrollDiv", {static: true}) content: ElementRef;
-  @HostListener('window:scroll', ['$event']) // for window scroll events
+  @HostListener('window:scroll', ['$event'])
   onScroll() {
     this.checkScroll();
   }
