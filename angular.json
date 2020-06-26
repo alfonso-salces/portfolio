@@ -17,8 +17,9 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/portfolio",
+            "outputPath": "docs",
             "index": "src/index.html",
+            "baseHref": "https://alfonso-salces.github.io/portfolio/",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
@@ -40,6 +41,7 @@
                   "with": "src/environments/environment.prod.ts"
                 }
               ],
+              "baseHref": "https://alfonso-salces.github.io/portfolio/",
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
