@@ -42,4 +42,13 @@ export class LanguageService {
   getTranslation(lang: string): Observable<any> {
     return this.translateService.getTranslation(lang);
   }
+
+  getCurrentTranslation(lang: string): any {
+    return this.translateService.translations;
+  }
+
+  getTranslationByKey(key: string) {
+    return this.translateService.get(key);
+  }
+
 }
