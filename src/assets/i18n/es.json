@@ -10,8 +10,11 @@
             "presentation": "Hola, mi nombre es Alfonso Salces, soy desarrollador web especializado en Front-End. He trabajado en diferentes empresas en proyectos para el ámbito de la educación y el sector bancario."
         },
         "skill": {
+            "responsive_title": "Responsive",
             "responsive": "Los diseños que realizo son completamente responsive, adaptados a los últimos estándares de medida de los diferentes dispositivos existentes hoy día.",
+            "modular_title": "Modular",
             "modular": "Cada aplicación diseñada será modular, con lo cual, cada parte será reutilizable, tanto los módulos como sus respectivos componentes.",
+            "planning_title": "Planificación",
             "planning": "Soy consciente de que una planificación exhaustiva es el propulsor de cualquier proyecto exitoso, por lo tanto siempre planifico hasta el más mínimo detalle en los proyectos en los que participo."
         }
     }

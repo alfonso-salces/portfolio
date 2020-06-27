@@ -3,15 +3,18 @@ import { SkillModel } from '../../models/skill.model';
 import { defaultSkills } from '../../../shared/consts/default-skills.const';
 import { LanguageService } from '../../../../services/language/language.service';
 import { Subscription } from 'rxjs';
+import { TechnologyModel } from '../../models/technology.model';
+import { defaultTechnologies } from '../../../shared/consts/default-technologies.const';
 
 @Component({
-  selector: 'app-welcome',
+  selector: 'pf-welcome',
   templateUrl: './welcome.component.html',
   styleUrls: ['./welcome.component.scss'],
 })
 export class WelcomeComponent implements OnInit, OnDestroy {
 
   skills: SkillModel[];
+  technologies: TechnologyModel[];
   showFab: boolean = true;
   currentLangSubscription: Subscription = new Subscription();
 
@@ -23,6 +26,7 @@ export class WelcomeComponent implements OnInit, OnDestroy {
 
   constructor(protected languageService: LanguageService) {
     this.skills = defaultSkills;
+    this.technologies = defaultTechnologies;
     this.checkScroll();
     const currentLang = this.languageService.getCurrentLangString();
     this.setSkillsTranslation(this.languageService.getCurrentTranslation(currentLang)[currentLang]);
@@ -48,7 +52,8 @@ export class WelcomeComponent implements OnInit, OnDestroy {
 
   setSkillsTranslation(translations: any): void {
     this.skills = defaultSkills.map(skill => {
-      skill.description = translations.public.skill[skill.key];
+      skill.description = translations.public.skill[skill.descriptionKey];
+      skill.title = translations.public.skill[skill.titleKey];
       return skill;
     });
   }

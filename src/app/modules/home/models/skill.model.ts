@@ -1,6 +1,7 @@
-export interface SkillModel {
-    key: string;
+export class SkillModel {
+    descriptionKey: string;
+    titleKey: string;
     icon: string;
-    title: string;
-    description: string;
+    title?: string;
+    description?: string;
 }

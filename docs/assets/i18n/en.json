@@ -10,9 +10,12 @@
       "presentation": "Hello, my name is Alfonso Salces, I am a web developer specialized in Front-End. I have worked in different companies on projects for both education and banking sector."
     },
     "skill": {
-        "responsive": "The designs I make are completely responsive, adapted to the latest measurement standards of the different devices that exist today.",
-        "modular": "Each designed application will be modular, and therefore each part will be reusable, both the modules and their respective components.",
-        "planning": "I am aware that thorough planning is the main force behind any successful project, therefore I always plan down to the smallest detail in the projects in which I participate."
+      "responsive_title": "Responsive",
+      "responsive": "The designs I make are completely responsive, adapted to the latest measurement standards of the different devices that exist today.",
+      "modular_title": "Modular",
+      "modular": "Each designed application will be modular, and therefore each part will be reusable, both the modules and their respective components.",
+      "planning_title": "Planification",
+      "planning": "I am aware that thorough planning is the main force behind any successful project, therefore I always plan down to the smallest detail in the projects in which I participate."
     }
   }
 }

@@ -47,8 +47,4 @@ export class LanguageService {
     return this.translateService.translations;
   }
 
-  getTranslationByKey(key: string) {
-    return this.translateService.get(key);
-  }
-
 }

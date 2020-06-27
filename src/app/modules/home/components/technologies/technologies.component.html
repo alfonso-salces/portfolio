@@ -1,0 +1,10 @@
+<div class="flex_container justify-content-center">
+    <ng-container *ngFor="let technology of technologies">
+        <div class="tech__container">
+            <div class="tech__icon">
+                <img src="assets/icons/{{technology.icon}}" alt="{{technology.title}}"/>
+            </div>
+            <div class="tech__title">{{technology.title}}</div>
+        </div>
+    </ng-container>
+</div>

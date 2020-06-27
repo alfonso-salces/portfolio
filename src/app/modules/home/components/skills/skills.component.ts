@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { SkillModel } from '../../models/skill.model';
 
 @Component({
-  selector: 'skills-component',
+  selector: 'pf-skills',
   templateUrl: './skills.component.html',
   styleUrls: ['./skills.component.scss'],
 })

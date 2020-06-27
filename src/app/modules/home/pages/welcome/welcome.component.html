@@ -19,7 +19,11 @@
 </div>
 
 <div class="pf-container">
-  <skills-component [skills]="skills"></skills-component>
+  <pf-skills [skills]="skills"></pf-skills>
+</div>
+
+<div class="primary-filled">
+  <pf-technologies [technologies]="technologies"></pf-technologies>
 </div>
 
 <div class="pf-fab" (click)="scrollTop()" *ngIf="showFab">

@@ -12,6 +12,23 @@
     cursor: pointer;
 }
 
+// Floating action button
+.pf-fab {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5%;
+    min-width: 50px;
+    height: 50px;
+    color: $white-color;
+    background-color: $primary-color;
+    position: fixed;
+    bottom: 1em;
+    right: 1em;
+    border: 2px solid $secondary-color;
+    border-radius: 8px;
+}
+
 // Subrayado que se utiliza debajo de los títulos de las cartas
 .underline {
     width: 80px;
@@ -58,11 +75,22 @@
     }
 }
 
+// Display Flex
+.flex_container {
+    display: flex;
+}
+
+// Display Grid
+.grid_container_three {
+    display: grid;
+    box-sizing: border-box;
+}
+
 // Pantallas pequeñas
 @include respond-below(sm) {
     .pf-container {
-        margin: 0.5em;
-        height: 500px;
+        margin: 0.5em 0.5em 2em 0.5em;
+
         .pf-cards-container {
             .pf-card {
                 width: 95%;
@@ -70,13 +98,19 @@
             }
         }
     }
+    .grid_container_three {
+        grid-template-columns: 100%;
+    }
+    .flex_container {
+        flex-direction: column;
+    }
 }
 
 // Pantallas medianas
 @include respond-between(sm, lg) {
     .pf-container {
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto 3em auto;
         .pf-cards-container {
             display: grid;
             grid-template-columns: 50% 50%;
@@ -86,13 +120,19 @@
             }
         }
     }
+    .grid_container_three {
+        grid-template-columns: 33% 33% 33%;
+    }
+    .flex_container {
+        flex-direction: row;
+    }
 }
 
 // Pantallas grandes
 @include respond-above(lg) {
     .pf-container {
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto 2em auto;
         .pf-cards-container {
             display: grid;
             grid-template-columns: 30% 30% 30%;
@@ -101,5 +141,11 @@
                 margin-bottom: 2em;
             }
         }  
+    }
+    .grid_container_three {
+        grid-template-columns: 33% 33% 33%;
+    }
+    .flex_container {
+        flex-direction: row;
     }
 }

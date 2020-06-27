@@ -1,4 +1,4 @@
-<div class="skills__container">
+<div class="grid_container_three">
     <div class="skill__card" *ngFor="let skill of skills">
         <div class="skill__icon secondary">
             <img src="assets/icons/{{skill.icon}}" alt="{{skill.title}}"/>
@@ -6,7 +6,7 @@
         <div class="skill__title">
             {{skill.title}}
         </div>
-        <div class="skill__description">
+        <div class="skill__description primary">
             {{skill.description}}
         </div>
     </div>
