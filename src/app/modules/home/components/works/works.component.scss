@@ -1,0 +1,13 @@
+.company__container {
+    padding: 1em;
+    .company__logo {
+        width: 200px;
+        height: 80px;
+        margin-bottom: 1em;
+    }
+    .company__name {
+        font-size: 18px;
+        text-transform: uppercase;
+        text-align: center;
+    }
+}

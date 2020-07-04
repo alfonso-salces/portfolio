@@ -7,6 +7,7 @@ import { SharedModule } from '../shared/shared.module';
 import { TranslatedModule } from '../shared/translated.module';
 import { MaterialModule } from '../shared/material.module';
 import { TechnologiesComponent } from './components/technologies/technologies.component';
+import { WorksComponent } from './components/works/works.component';
 
 
 @NgModule({
@@ -15,6 +16,7 @@ import { TechnologiesComponent } from './components/technologies/technologies.co
     WelcomeComponent,
     SkillsComponent,
     TechnologiesComponent,
+    WorksComponent,
   ],
   imports: [
     CommonModule,
